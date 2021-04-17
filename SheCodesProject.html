@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balcony Gardening</title>
+
+    <style>
+        body {
+            background-color: darkgreen;
+            background: linear-gradient(darkgreen, #438d49);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            font-size: 64px;
+            font-weight: lighter;
+            color: #235527;
+            background: #6ce476;
+            border-radius: 5px;
+            padding: 35px;
+            width: auto;
+            height: 80px;
+            margin: 20px auto;
+            border: 20px;
+            transition: all 200ms ease-in-out;
+        }
+
+
+        h2 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: unset;
+            color: #6ce476;
+            text-transform: lowercase;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: unset;
+            color: #143117;
+        }
+
+        p {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            line-height: 40px;
+            color: #6ce476;
+        }
+
+        strong {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            line-height: 40px;
+            color: #6ce476;
+            text-decoration: transparent 80%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button {
+            color: #235527;
+            background: #6ce476;
+            display: block;
+            font-size: 24px;
+            text-decoration: none;
+            width: 250px;
+            height: 70px;
+            margin: 0 auto 30px auto;
+            border: 2px solid #6ce476;
+            border-radius: 10px;
+            box-shadow: 7px 7px 7px #112913;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover {
+            color: #6ce476;
+            background: #235527;
+            cursor: pointer;
+        }
+
+        .highlight {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            line-height: 40px;
+            color: #6ce476;
+            text-decoration: transparent 80%;
+        }
+
+        .footer {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: unset;
+            color: #0f2411;
+        }
+
+        .button {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .actionbutton {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 0px 60px;
+        }
+
+        img {
+            width: 35%;
+            display: block;
+            margin: 0 auto 50px auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- todo: HTML/CSS 
+    - Multiple HTML Pages
+    - Advanced HTML Links
+    - CSS Variables
+    - Flexbox
+    - Utility CSS Classes
+    - Responsive Grids
+    - Responsive Images
+    - Responsive Navigation-->
+    <!-- todo: Javascript:  
+    - JS Revision
+    - JS Strings
+    - JS Math
+    - JS Arrays and Loops
+    - JS Object
+    - JS Functions
+    - JS Functions Parameters
+    - JS Debugging
+    - JS Functions Return
+    - JS Dates
+    - JS Selectors
+    - JS Events
+    - JS Forms-->
+    <!-- todo: - API:
+    - AJAX
+    - Weather API
+    - Geolocation API -->
+    <!-- *try to change hr line colour -->
+    <!-- *try to figure out how to store the collected info in javascript-->
+    <!-- *try to figure out how to display two buttons side-by-side -->
+    <!-- *Figure out how to display on a phone -->
+
+    <div class="container">
+        <h1>
+            Balcony Gardening
+        </h1>
+
+        <h2>
+            Urban gardening in small pots
+        </h2>
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/006/965/original/NicoleBalconyGarden.jpg?1618109129"
+            alt="Balcony Garden" width="300" />
+
+    </div>
+
+    <div class="container">
+
+        <p>
+
+            I had attempted to grow things in pots a few years ago but took a break when I went back to school. Last
+            spring, I started again since I was working from home every day and needed to greenify my balcony to improve
+            the brick and concrete view.
+            Kevin Espiritu's
+            <a href="https://www.youtube.com/channel/UCSbyncU597LMwb3HhnAI_4w" target="_blank">
+                Youtube channel </a>
+            and <a href="https://www.instagram.com/epicgardening/" target="_blank">
+                Instagram page </a>
+            were immensely helpful while I tried to figure out how to not kill little green plants. <span
+                class="highlight"> So far this
+                year, my saskatoon berry and crabapple seeds were lost in the mail, but the tomatoes, blackberries,
+                greens, and herbs are doing great (when I don't overwater them.)
+            </span>
+
+        </p>
+
+        <br />
+
+        <button>
+            <a class="button" href="https://www.epicgardening.com/" target="_blank">
+                Learn more on
+                <br />
+                Eric's website
+            </a>
+        </button>
+
+        <button>
+            <a class="actionbutton" target="_blank">
+                Your Favourite Plant
+            </a>
+        </button>
+
+    </div>
+    <h3> </h3>
+    <br />
+    <div>
+        <hr />
+
+        <p class="footer">
+            (C) Nicole Bergen
+        </p>
+    </div>
+
+    <script>
+
+        function favouritePlant() {
+
+            let plant = prompt("What is your favourite plant to grow?");
+            plant = plant.toLowerCase().trim();
+            let h3 = document.querySelector("h3");
+
+            if (plant === "tomatoes") {
+                h3.innerHTML = ("Happy growing!🍅");
+            }
+            else if (plant === "strawberries") {
+                h3.innerHTML = ("Happy growing!🍓");
+            }
+            else {
+                h3.innerHTML = ("Happy growing!🌱");
+            }
+        }
+        let actionButton = document.querySelector(".actionbutton");
+        actionButton.addEventListener("click", favouritePlant);
+
+    </script>
+
+</body>
+
+</html>
